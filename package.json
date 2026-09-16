@@ -6,16 +6,16 @@
     "apps/api",
     "apps/web"
   ],
-  "scripts": {
-    "dev": "concurrently -n api,web -c green,blue \"npm run dev -w @darul-karim/api\" \"npm run dev -w @darul-karim/web\"",
-    "build": "npm run build -w @darul-karim/api && npm run build -w @darul-karim/web",
-    "test": "npm run test -w @darul-karim/api",
-    "lint": "npm run lint -w @darul-karim/api && npm run lint -w @darul-karim/web",
-    "prisma:generate": "prisma generate --schema prisma/schema.prisma",
-    "prisma:migrate": "prisma migrate dev --schema prisma/schema.prisma",
-    "seed": "tsx prisma/seed.ts",
-    "postinstall": "prisma generate --schema prisma/schema.prisma"
-  },
+"scripts": {
+  "dev": "concurrently -n api,web -c green,blue \"npm run dev -w @darul-karim/api\" \"npm run dev -w @darul-karim/web\"",
+  "build": "npm run build -w @darul-karim/api && npm run build -w @darul-karim/web",
+  "test": "npm run test -w @darul-karim/api",
+  "lint": "npm run lint -w @darul-karim/api && npm run lint -w @darul-karim/web",
+  "prisma:generate": "npm run prisma:generate -w @darul-karim/api",
+  "prisma:migrate": "npm run prisma:migrate -w @darul-karim/api",
+  "seed": "tsx prisma/seed.ts",
+  "postinstall": "npm run prisma:generate -w @darul-karim/api"
+},
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
