@@ -14,7 +14,7 @@
   "prisma:generate": "npm run prisma:generate -w @darul-karim/api",
   "prisma:migrate": "npm run prisma:migrate -w @darul-karim/api",
   "seed": "tsx prisma/seed.ts",
-"postinstall": "npx prisma generate --schema apps/api/prisma/schema.prisma"
+"postinstall": "npm run prisma:generate -w @darul-karim/api"
 },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
