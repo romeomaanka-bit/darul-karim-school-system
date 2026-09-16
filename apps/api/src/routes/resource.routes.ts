@@ -20,12 +20,12 @@ function validateResource(key: keyof typeof resources, isUpdate = false) {
 
 function attach(key: keyof typeof resources, path: string) {
   resourceRouter.route(path)
-    .get(assertResourceRole(key, "read"), (request, response) => listResource(key, request, response))
-    .post(assertResourceRole(key, "write"), validateResource(key), (request, response) => createResource(key, request, response));
+    .get(assertResourceRole(key, "read"), (request: AuthenticatedRequest, response: Response) => listResource(key, request, response))
+    .post(assertResourceRole(key, "write"), validateResource(key), (request: AuthenticatedRequest, response: Response) => createResource(key, request, response));
   resourceRouter.route(`${path}/:id`)
-    .get(assertResourceRole(key, "read"), (request, response) => getResource(key, request, response))
-    .put(assertResourceRole(key, "write"), validateResource(key, true), (request, response) => updateResource(key, request, response))
-    .delete(assertResourceRole(key, "write"), (request, response) => deleteResource(key, request, response));
+    .get(assertResourceRole(key, "read"), (request: AuthenticatedRequest, response: Response) => getResource(key, request, response))
+    .put(assertResourceRole(key, "write"), validateResource(key, true), (request: AuthenticatedRequest, response: Response) => updateResource(key, request, response))
+    .delete(assertResourceRole(key, "write"), (request: AuthenticatedRequest, response: Response) => deleteResource(key, request, response));
 }
 
 attach("classes", "/classes");
@@ -49,8 +49,8 @@ attach("settings", "/settings");
 attach("auditLogs", "/audit-logs");
 
 resourceRouter.get("/notifications", listNotifications);
-resourceRouter.put("/notifications/:id/read", (request, response, next) => { request.body = notificationReadSchema.parse(request.body); next(); }, markNotificationRead);
-resourceRouter.get("/health", (_request, response) => response.json({ success: true, data: { status: "ok" } }));
+resourceRouter.put("/notifications/:id/read", (request: AuthenticatedRequest, response: Response, next: NextFunction) => { request.body = notificationReadSchema.parse(request.body); next(); }, markNotificationRead);
+resourceRouter.get("/health", (_request: AuthenticatedRequest, response: Response) => response.json({ success: true, data: { status: "ok" } }));
 
 export const reportsRouter = Router();
 reportsRouter.use(authenticate, allow("ADMIN", "TEACHER"));
