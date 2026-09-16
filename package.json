@@ -2,7 +2,10 @@
   "name": "darul-karim-school-system",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["apps/api", "apps/web"],
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
   "scripts": {
     "dev": "concurrently -n api,web -c green,blue \"npm run dev -w @darul-karim/api\" \"npm run dev -w @darul-karim/web\"",
     "build": "npm run build -w @darul-karim/api && npm run build -w @darul-karim/web",
@@ -10,13 +13,14 @@
     "lint": "npm run lint -w @darul-karim/api && npm run lint -w @darul-karim/web",
     "prisma:generate": "prisma generate --schema prisma/schema.prisma",
     "prisma:migrate": "prisma migrate dev --schema prisma/schema.prisma",
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate --schema prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.1",
-    "@types/jsonwebtoken": "^9.0.9",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^22.13.10",
     "concurrently": "^9.1.2",
     "prisma": "^6.5.0",
