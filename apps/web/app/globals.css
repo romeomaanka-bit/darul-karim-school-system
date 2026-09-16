@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #f7faf8; }
+body { margin: 0; min-height: 100vh; background: #f7faf8; color: #10261a; font-family: Arial, Helvetica, sans-serif; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { outline-offset: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #2563eb; }
+@layer components {
+  .panel { @apply rounded-xl border border-[#d6e4dc] bg-white; }
+  .btn-primary { @apply inline-flex min-h-10 items-center justify-center rounded-lg bg-school-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-school-700 disabled:cursor-not-allowed disabled:bg-slate-400; }
+  .btn-secondary { @apply inline-flex min-h-10 items-center justify-center rounded-lg border border-[#b8cbbe] bg-white px-4 py-2 text-sm font-semibold text-school-ink transition hover:bg-school-50 disabled:cursor-not-allowed disabled:text-slate-400; }
+  .field { @apply mt-1 block min-h-10 w-full rounded-lg border border-[#b8cbbe] bg-white px-3 py-2 text-sm text-school-ink placeholder:text-slate-400; }
+  .field-label { @apply block text-sm font-semibold text-school-ink; }
+  .nav-link { @apply flex min-h-11 items-center rounded-lg px-3 text-sm font-semibold text-[#52665a] transition hover:bg-school-50 hover:text-school-700; }
+  .nav-link-active { @apply border-l-4 border-school-600 bg-school-50 pl-2 text-school-700; }
+}
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: light; }
+}
+@media (max-width: 480px) {
+  body { padding: 0; }
+  .mobile-record { border: 1px solid #d6e4dc; border-radius: 12px; padding: 16px; }
+}

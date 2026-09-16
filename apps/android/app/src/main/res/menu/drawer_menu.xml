@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Students" />
+
+        <item
+            android:id="@+id/nav_teachers"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Teachers" />
+
+        <item
+            android:id="@+id/nav_parents"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Parents" />
+
+        <item
+            android:id="@+id/nav_classes"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Classes" />
+
+        <item
+            android:id="@+id/nav_subjects"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Subjects" />
+
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Attendance" />
+
+        <item
+            android:id="@+id/nav_timetable"
+            android:icon="@android:drawable/ic_menu_week"
+            android:title="Timetable" />
+
+        <item
+            android:id="@+id/nav_exams"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Exams" />
+
+        <item
+            android:id="@+id/nav_results"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Results" />
+
+        <item
+            android:id="@+id/nav_assignments"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Assignments" />
+
+        <item
+            android:id="@+id/nav_fees"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="Fees &amp; Payments" />
+
+        <item
+            android:id="@+id/nav_announcements"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Announcements" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Notifications" />
+
+        <item
+            android:id="@+id/nav_complaints"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Complaints" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Reports" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Settings" />
+
+    </group>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Logout" />
+
+</menu>

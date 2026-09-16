@@ -1,0 +1,1 @@
+export default function Loading() { return <main className="grid min-h-screen place-items-center p-6"><p className="rounded-lg border border-[#d6e4dc] bg-white px-4 py-3 text-sm text-[#52665a]" aria-live="polite">Loading Darul-Karim School System…</p></main>; }

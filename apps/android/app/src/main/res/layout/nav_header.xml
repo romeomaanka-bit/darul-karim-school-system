@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="18dp"
+    android:background="@color/dk_green">
+
+    <ImageView
+        android:id="@+id/nav_logo"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/darul_karim_logo"
+        android:scaleType="centerCrop"
+        android:background="@android:color/white"
+        android:contentDescription="Darul-Karim School logo" />
+
+    <TextView
+        android:id="@+id/nav_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Darul-Karim User"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/nav_user_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="USER"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:alpha="0.9" />
+</LinearLayout>

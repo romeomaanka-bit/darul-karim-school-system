@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) { return <main className="grid min-h-screen place-items-center p-6"><section className="panel max-w-md p-6"><h1 className="text-xl font-bold">This page could not be loaded</h1><p className="mt-2 text-sm text-[#52665a]">Please retry. If the problem continues, contact the school administrator.</p><button className="btn-primary mt-5" onClick={reset}>Retry</button></section></main>; }
